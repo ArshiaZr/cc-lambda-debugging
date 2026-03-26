@@ -12,7 +12,7 @@ def lambda_handler(event, context=None):
     
     if celsius == None:
         return {
-            'statusCode': 200,
+            'statusCode': 400,
             'body': json.dumps('Error: temperature field is required')
         }
     

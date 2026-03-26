@@ -45,11 +45,11 @@ def lambda_handler(event, context=None):
         "e": "Echo",
         "E": "Echo"
     }
-    for char in word:
-        if char in m:
+    for c in word:
+        if c in m:
             res.append(m[c])
         else:
-            res.append(char)
+            res.append(c)
 
     return {
         'statusCode': 200,

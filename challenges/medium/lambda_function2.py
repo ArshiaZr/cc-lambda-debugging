@@ -35,15 +35,15 @@ def lambda_handler(event, context=None):
         "a": "Alpha",
         "A": "Alpha",
         "I": "India",
+        "i": "India",
+        "e": "Echo",
+        "E": "Echo",
         "O": "Oscar",
         "o": "Oscar",
         "u": "Uniform",
         "U": "Uniform",
         "y": "Yankee",
-        "Y": "Yankee",
-        "i": "india",
-        "e": "Echo",
-        "E": "Echo"
+        "Y": "Yankee"
     }
     for c in word:
         if c in m:

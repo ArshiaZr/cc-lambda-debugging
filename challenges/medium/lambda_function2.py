@@ -46,7 +46,7 @@ def lambda_handler(event, context=None):
         "E": "Echo"
     }
     for char in word:
-        if c in m:
+        if char in m:
             res.append(m[c])
         else:
             res.append(char)

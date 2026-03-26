@@ -31,14 +31,24 @@ def lambda_handler(event, context=None):
     expr = expr.split(" ")
     res = []
 
-    for char in expr:
+    for c in expr:
+        if c in ["+", "-", "/", "*"]:
+            b = res.pop()
+            a = res.pop()
 
-        if char in ["+", "-", "/", "*"]:
-            pass
+            if c == "-":
+                res.append(a - b)
+            if c == "+":
+                res.append(a + b)
+            if c == "/":
+                res.append(a/b)
+            if c == "*":
+                res.append(a * b)
+            
         else:
-            res.append(char)
+            res.append(float(c) if "." in c else int(c))
 
     return {
         'statusCode': 200,
-        'body': res
+        'body': res[0]
     }
